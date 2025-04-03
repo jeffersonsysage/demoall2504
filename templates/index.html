@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡單 AKS 自動化部署示範</title>
+    <script>
+        function fetchGreeting() {
+            fetch('/api/greet')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('message').textContent = data.message;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>歡迎來到快速 AKS 自動化部署示範！</h1>
+    <p>點擊按鈕來獲取訊息：</p>
+    <button onclick="fetchGreeting()">獲取問候</button>
+    <p id="message"></p>
+</body>
+</html>
+
