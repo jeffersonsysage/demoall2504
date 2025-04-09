@@ -11,7 +11,7 @@ def index():
 
 @app.route('/api/greet')
 def greet():
-    return jsonify(message="Simple AKS Automated deployments ")
+    return jsonify(message="Simple AKS Automated deployments TEST")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
